@@ -7,7 +7,7 @@ Final project for Cornell's Interactive Device Design
 
 ## 2. 3d-printed prototype & electronics
 
-![3d-printed prototype & electronics](/3d_printed_prototype.JPG)
+![3d-printed prototype & electronics](/3d_printed_bot.png)
 
 ## 3. Final product video (coming soon)
 [Click here to watch Self-balancing Robot video](https://youtu.be/pT9M0uZvIQ8)
