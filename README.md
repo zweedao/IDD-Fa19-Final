@@ -13,10 +13,11 @@ Final project for Cornell's Interactive Device Design
 [Click here to watch Self-balancing Robot video](https://youtu.be/pT9M0uZvIQ8)
 
 ## 4. How it's done
+I refered to several open sources and put the pieces together as below. The main work was to assemble these pieces together and lots of tuning for PID parameters to make the robot balanced & smooth. 
 
 - Arduino & breadboard: included in class's kit
 - Motors & driver ($10): https://www.amazon.com/gp/product/B07T5SVCSX/
 - Gyro + accelerometer sensor ($4): https://www.amazon.com/Ximimark-MPU-6050-Accelerometer-Gyroscope-Converter/dp/B07MMZ37PT/
-- Robot body: edited & simplified from [this thingiverse design](https://www.thingiverse.com/thing:3369262)
+- Robot body: simplified from [this thingiverse design](https://www.thingiverse.com/thing:3369262)
 - PID algorithm: followed this [Instructables tutorial](https://www.instructables.com/id/Arduino-Self-Balancing-Robot-1/)
 
