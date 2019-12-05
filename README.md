@@ -1,5 +1,7 @@
 # IDD-Fa19-Final - A self-balancing robot
-Final project for Cornell's Interactive Device Design
+Final project for Cornell's Interactive Device Design.
+
+I wanted to find out how to build a self-balancing motorbike (and thus an autonomous motorbike eventually!), but that would take too long for 1 semester. Instead, I decided to build something simpler: a self-balancing robot, just to learn how PID controller works, and just because I like robots in general :)
 
 ## 1. Paper prototype
 
