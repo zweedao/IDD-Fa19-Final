@@ -9,10 +9,6 @@
 #define rightMotorPin1  10
 #define rightMotorPin2  11
 
-#define TRIGGER_PIN 9
-#define ECHO_PIN 8
-#define MAX_DISTANCE 75
-
 #define Kp  17
 #define Kd  0.5
 #define Ki  150
