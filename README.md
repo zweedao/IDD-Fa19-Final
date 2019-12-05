@@ -3,7 +3,7 @@ Final project for Cornell's Interactive Device Design.
 
 ## 1. Motivation
 
-I wanted to find out how to build a self-balancing motorbike (and thus an autonomous motorbike eventually!), but that would take too long for 1 semester. Instead, I decided to build something simpler: a self-balancing robot, just to learn how PID controller works, and just because I like robots in general :)
+I wanted to find out how to build a self-balancing motorbike (and thus an autonomous motorbike eventually!), but that would take too long for 1 semester. Instead, I decided to build something simpler: a self-balancing robot, which has more open sourced materials. I want to see how PID controller works, and also I just like robots in general. It's fun :)
 
 ## 2. Paper prototype
 
