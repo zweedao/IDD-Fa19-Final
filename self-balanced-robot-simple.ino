@@ -91,6 +91,7 @@ void loop() {
   gyroY = mpu.getRotationY();
 
   //set motor power after constraining it
+  motorPower = constrain(motorPower, -255, 255);
   if (motorPower>0) //Falling towards front 
     Forward(motorPower); //Rotate the wheels forward 
   else if (motorPower<0) //Falling towards back
