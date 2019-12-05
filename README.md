@@ -28,6 +28,7 @@ I refered to several open sources and put the pieces together as below. The main
 - Arduino & breadboard: included in class's kit
 - Motors & driver ($10): https://www.amazon.com/gp/product/B07T5SVCSX/
 - Gyro + accelerometer sensor ($4): https://www.amazon.com/Ximimark-MPU-6050-Accelerometer-Gyroscope-Converter/dp/B07MMZ37PT/
+- Lithium battery ($15): https://www.amazon.com/KELIWOW-Rechargeable-Suitable-Vehicles-Off-Road/dp/B07KKCK83S/
 - Robot body: simplified from [this thingiverse design](https://www.thingiverse.com/thing:3369262)
 - PID algorithm for self-balancing: followed this [Instructables tutorial](https://www.instructables.com/id/Arduino-Self-Balancing-Robot-1/)
 
