@@ -13,6 +13,10 @@ Final project for Cornell's Interactive Device Design
 [Click here to watch Self-balancing Robot video](https://youtu.be/pT9M0uZvIQ8)
 
 ## 4. How it's done
+The robot is auto-balanced using an algorithm called PID controller. This basically sets motor speed bases on the deviation of the robot from the balanced position.
+
+![PID controller for self-balancing](/PID_self_balance.png)
+
 I refered to several open sources and put the pieces together as below. The main work was to assemble these pieces together and lots of tuning for PID parameters to make the robot balanced & smooth. 
 
 - Arduino & breadboard: included in class's kit
