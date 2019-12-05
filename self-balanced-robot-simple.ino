@@ -68,21 +68,13 @@ void loop() {
 ISR(TIMER1_COMPA_vect){
   //measure angle using acceleration along X & Z axises
   accAngle = atan2(accX, accZ)*RAD_TO_DEG;
-  //Serial.print("accAngle: ");
-  //Serial.println(accAngle);
 
   //measure angle using rotation velocity along Y axis
   gyroRate = map(gyroY, -32768, 32767, -250, 250);
   gyroAngle = (float)gyroRate * sampleTime;
-  //currentGyroAngle = prevAngle - gyroAngle;
-  //prevAngle = currentGyroAngle;
-  //Serial.print("currentGyroAngle: ");
-  //Serial.println(currentGyroAngle);
 
   //calculate angle using accelerometer & gyro results above
   currentAngle = 0.9934*(prevAngle - gyroAngle) + 0.0066*(accAngle); 
-  //Serial.print("currentAngle: ");
-  //Serial.println(currentAngle);
 
   //calculate error
   error = currentAngle - targetAngle;
