@@ -27,6 +27,39 @@ volatile float accAngle, gyroAngle, prevAngle=0, currentAngle, currentGyroAngle,
 volatile byte count=0;
 unsigned long currTime, prevTime=0, loopTime;
 
+void Forward(volatile int motorSpeed) //Code to rotate the wheel forward 
+{
+    analogWrite(leftMotorPin1, motorSpeed);
+    analogWrite(leftMotorPin2, 0);
+    analogWrite(rightMotorPin1, motorSpeed);
+    analogWrite(rightMotorPin2, 0);
+    Serial.print("F"); //Debugging information 
+}
+void Reverse(volatile int motorSpeed) //Code to rotate the wheel Backward  
+{
+    analogWrite(leftMotorPin1, 0);
+    analogWrite(leftMotorPin2, motorSpeed*-1);
+    analogWrite(rightMotorPin1 ,0);
+    analogWrite(rightMotorPin2 ,motorSpeed*-1); 
+    Serial.print("R");
+}
+
+void init_PID() { // Code to initiate PID 
+  // initialize Timer1
+  cli();          // disable global interrupts
+  TCCR1A = 0;     // set entire TCCR1A register to 0
+  TCCR1B = 0;     // same for TCCR1B    
+  // set compare match register to set sample time 5ms
+  OCR1A = 9999;    
+  // turn on CTC mode
+  TCCR1B |= (1 << WGM12);
+  // Set CS11 bit for prescaling by 8
+  TCCR1B |= (1 << CS11);
+  // enable timer compare interrupt
+  TIMSK1 |= (1 << OCIE1A);
+  sei();          // enable global interrupts
+}
+
 void setup() {
   //setup motors
   pinMode (leftMotorPin1, OUTPUT);
@@ -84,37 +117,4 @@ ISR(TIMER1_COMPA_vect){
   //calculate output from P, I and D values
   motorPower = Kp*(error) + Ki*(errorSum)*sampleTime - Kd*(currentAngle-prevAngle)/sampleTime;
   prevAngle = currentAngle;
-}
-
-void Forward(volatile int motorSpeed) //Code to rotate the wheel forward 
-{
-    analogWrite(leftMotorPin1, motorSpeed);
-    analogWrite(leftMotorPin2, 0);
-    analogWrite(rightMotorPin1, motorSpeed);
-    analogWrite(rightMotorPin2, 0);
-    Serial.print("F"); //Debugging information 
-}
-void Reverse(volatile int motorSpeed) //Code to rotate the wheel Backward  
-{
-    analogWrite(leftMotorPin1, 0);
-    analogWrite(leftMotorPin2, motorSpeed*-1);
-    analogWrite(rightMotorPin1 ,0);
-    analogWrite(rightMotorPin2 ,motorSpeed*-1); 
-    Serial.print("R");
-}
-
-void init_PID() {  
-  // initialize Timer1
-  cli();          // disable global interrupts
-  TCCR1A = 0;     // set entire TCCR1A register to 0
-  TCCR1B = 0;     // same for TCCR1B    
-  // set compare match register to set sample time 5ms
-  OCR1A = 9999;    
-  // turn on CTC mode
-  TCCR1B |= (1 << WGM12);
-  // Set CS11 bit for prescaling by 8
-  TCCR1B |= (1 << CS11);
-  // enable timer compare interrupt
-  TIMSK1 |= (1 << OCIE1A);
-  sei();          // enable global interrupts
 }
