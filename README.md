@@ -1,5 +1,6 @@
-# IDD-Fa19-Final - A self-balancing robot
-Final project for Cornell's Interactive Device Design.
+# A self-balancing robot
+
+[Click here to watch Self-balancing Robot video](https://youtu.be/pT9M0uZvIQ8)
 
 ## 1. Motivation
 
@@ -15,10 +16,7 @@ I wanted to find out how to build a self-balancing motorbike (and thus a self-dr
 
 ![3d-printed prototype & electronics](/3d_printed_bot.png)
 
-## 4. Final product video
-[Click here to watch Self-balancing Robot video](https://youtu.be/pT9M0uZvIQ8)
-
-## 5. How it's done
+## 4. How it's done
 The robot is auto-balanced using an algorithm called PID controller. This basically sets motors' speed based on the deviation of the robot from the balanced position. The higher the deviation, the faster the motors run to counter the fall.
 
 ![PID controller for self-balancing](/PID_self_balance.png)
