@@ -21,6 +21,8 @@ The robot is auto-balanced using an algorithm called PID controller. This basica
 
 ![PID controller for self-balancing](/PID_self_balance.png)
 
+## References
+
 I refered to several open sources and put the pieces together as below. The main work was to assemble these pieces together and lots of tuning for PID parameters to make the robot balanced & smooth. 
 
 - Arduino & breadboard: included in class's kit
