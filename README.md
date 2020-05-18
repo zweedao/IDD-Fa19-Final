@@ -1,6 +1,6 @@
 # A self-balancing robot
 
-[Click here to watch Self-balancing Robot video](https://youtu.be/pT9M0uZvIQ8)
+[Click here to watch the video of my Self-balancing Robot](https://youtu.be/pT9M0uZvIQ8)
 
 ## 1. Motivation
 
